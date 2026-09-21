@@ -1,34 +1,27 @@
-"adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+singh:
+  - firstname: ["Shivansh Pratap", "Shivansh"]
+    url: "https://scholar.google.com/citations?user=wUdlS-EAAAAJ&hl=en"
 
-"podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+nair:
+  - firstname: ["Naveen Sudheer", "Naveen"]
+    url: "https://scholar.google.com/citations?hl=en&user=b-2thkoAAAAJ&hl=en"
 
-"rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+ujjawal:
+  - firstname: ["Samaksh"]
+    url: "https://scholar.google.com/citations?user=Qq5iQUYAAAAJ&hl=en"
 
-"bach":
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
+mishra:
+  - firstname: ["Sarthak"]
+    url: "https://scholar.google.com/citations?user=ovjvMd0AAAAJ&hl=en"
 
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
+yadav:
+  - firstname: ["Rishabh Dev", "Rishabh"]
+    url: "https://scholar.google.com/citations?user=I2MEXkMAAAAJ&hl=en"
 
-"przibram":
-  - firstname: ["Karl"]
-    url: https://link.springer.com/article/10.1007/s00016-019-00242-z
+roy:
+  - firstname: ["Spandan"]
+    url: "https://scholar.google.com/citations?hl=en&user=tUKoUgMAAAAJ"
 
-"schrodinger":
-  - firstname: ["Erwin"]
-    url: https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger
-
-"lorentz":
-  - firstname: ["Hendrik Antoon"]
-    url: https://en.wikipedia.org/wiki/Hendrik_Lorentz
-
-"planck":
-  - firstname: ["Max"]
-    url: https://en.wikipedia.org/wiki/Max_Planck
+das:
+  - firstname: ["Avirup"]
+    url: "https://scholar.google.com/citations?user=1XCHkskAAAAJ&hl=en"
