@@ -21,7 +21,7 @@ social: true # includes social icons at the bottom of the page
 
 I am a Master's by Research student at the [Robotics Research Center, IIIT Hyderabad](https://robotics.iiit.ac.in/), advised by [Dr. Spandan Roy](https://spandanroy.github.io/).
 
-My research is on learning for contact-rich dexterous manipulation. I am interested in what robots can infer about their physical interaction with objects, contact states, geometry, and spatial relationships, from RGB cameras and proprioception, and how that information can drive better manipulation policies on real hardware. 
+My research is on learning for contact-rich dexterous manipulation. I am interested in what robots can infer about their physical interaction with objects, contact states, geometry, and spatial relationships, from RGB cameras and proprioception, and how that information can drive better manipulation policies on real hardware.
 
 This has led to work on learning contact estimation as a pseudo-tactile signal for in-hand object reorientation, and on dexterous grasping policies that remain robust to uncalibrated camera viewpoints, both validated on physical robots.
 
