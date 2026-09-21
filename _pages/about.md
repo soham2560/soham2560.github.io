@@ -54,7 +54,7 @@ Always happy to collaborate or chat robotics! feel free to reach out at my [emai
 ## experience
 
 <div class="cv-media">
-  <div class="cv-thumb"><a href="https://gist.github.com/soham2560/700cc1e9e350ad4d32486e0a3a37fbb4"><img src="{{ '/assets/img/gsoc_logo.png' | relative_url }}" alt="Google Summer of Code" loading="lazy" /></a></div>
+  <div class="cv-thumb"><a href="https://gist.github.com/soham2560/700cc1e9e350ad4d32486e0a3a37fbb4"><img class="cv-logo" src="{{ '/assets/img/gsoc_logo.png' | relative_url }}" alt="Google Summer of Code" loading="lazy" /></a></div>
   <div class="cv-body">
     <div class="cv-row"><span class="cv-title">Google Summer of Code @ ros2-control <a href="https://gist.github.com/soham2560/700cc1e9e350ad4d32486e0a3a37fbb4">[report]</a></span><span class="cv-meta">2025</span></div>
     <div class="cv-row cv-sub"><span>Open-Source Contributor</span><span>Remote</span></div>
@@ -65,7 +65,7 @@ Always happy to collaborate or chat robotics! feel free to reach out at my [emai
 </div>
 
 <div class="cv-media">
-  <div class="cv-thumb"><a href="https://robotics.iiit.ac.in/"><img src="{{ '/assets/img/rrc_logo.jpg' | relative_url }}" alt="Robotics Research Center, IIIT Hyderabad" loading="lazy" /></a></div>
+  <div class="cv-thumb"><a href="https://robotics.iiit.ac.in/"><img class="cv-logo" src="{{ '/assets/img/rrc_logo.jpg' | relative_url }}" alt="Robotics Research Center, IIIT Hyderabad" loading="lazy" /></a></div>
   <div class="cv-body">
     <div class="cv-row"><span class="cv-title">Robotics Research Center, IIIT Hyderabad</span><span class="cv-meta">Feb – Jul 2024</span></div>
     <div class="cv-row cv-sub"><span>Research Intern</span><span>Hyderabad, India</span></div>
@@ -99,7 +99,7 @@ Always happy to collaborate or chat robotics! feel free to reach out at my [emai
 </div>
 
 <div class="cv-media">
-  <div class="cv-thumb"><img src="{{ '/assets/img/matlab_logo.jpeg' | relative_url }}" alt="MATLAB" loading="lazy" /></div>
+  <div class="cv-thumb"><img class="cv-logo" src="{{ '/assets/img/matlab_logo.jpeg' | relative_url }}" alt="MATLAB" loading="lazy" /></div>
   <div class="cv-body">
     <div class="cv-row"><span class="cv-title">MATLAB Winners Circle</span><span class="cv-meta">2020</span></div>
     <div class="cv-note">Omni-drive robot modeling and control in MATLAB/Simulink.</div>
@@ -109,7 +109,7 @@ Always happy to collaborate or chat robotics! feel free to reach out at my [emai
 ## teaching
 
 <div class="cv-media">
-  <div class="cv-thumb"><img src="{{ '/assets/img/iiit_logo.jpg' | relative_url }}" alt="IIIT Hyderabad" loading="lazy" /></div>
+  <div class="cv-thumb"><img class="cv-logo" src="{{ '/assets/img/iiit_logo.jpg' | relative_url }}" alt="IIIT Hyderabad" loading="lazy" /></div>
   <div class="cv-body">
     <div class="cv-entry">
       <div class="cv-title">Mobile Robotics (CS7.503)</div>
@@ -127,7 +127,7 @@ Always happy to collaborate or chat robotics! feel free to reach out at my [emai
 </div>
 
 <div class="cv-media">
-  <div class="cv-thumb"><a href="https://nptel.ac.in/courses/101106001"><img src="{{ '/assets/img/nptel_logo.jpg' | relative_url }}" alt="NPTEL" loading="lazy" /></a></div>
+  <div class="cv-thumb"><a href="https://nptel.ac.in/courses/101106001"><img class="cv-logo" src="{{ '/assets/img/nptel_logo.jpg' | relative_url }}" alt="NPTEL" loading="lazy" /></a></div>
   <div class="cv-body">
     <div class="cv-entry">
       <div class="cv-title">Perception &amp; Planning for Aerial Vehicles <a href="https://nptel.ac.in/courses/101106001">[link]</a></div>
@@ -137,7 +137,7 @@ Always happy to collaborate or chat robotics! feel free to reach out at my [emai
 </div>
 
 <div class="cv-media">
-  <div class="cv-thumb"><a href="https://github.com/RoboticsIIITH/summer-school-2025"><img src="{{ '/assets/img/rrc_logo.jpg' | relative_url }}" alt="RRC Robotics Lab" loading="lazy" /></a></div>
+  <div class="cv-thumb"><a href="https://github.com/RoboticsIIITH/summer-school-2025"><img class="cv-logo" src="{{ '/assets/img/rrc_logo.jpg' | relative_url }}" alt="RRC Robotics Lab" loading="lazy" /></a></div>
   <div class="cv-body">
     <div class="cv-entry">
       <div class="cv-title">RRC Robotics Summer School 2025 <a href="https://github.com/RoboticsIIITH/summer-school-2025">[link]</a></div>

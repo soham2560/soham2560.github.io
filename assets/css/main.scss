@@ -43,11 +43,25 @@
 }
 
 html[data-theme="dark"] {
-  --global-theme-color: #0076df;
-  --global-hover-color: #0076df;
+  --global-theme-color: #5aa9ff;
+  --global-hover-color: #5aa9ff;
+  --global-footer-bg-color: #111112;
+  --global-footer-text-color: #9a9a9f;
+  --global-footer-link-color: #e8e8e8;
   --ink-strong: #fff;
   --ink-body: #e8e8e8;
   --ink-muted: #9a9a9f;
+
+  .publications ol.bibliography li .abbr abbr.badge {
+    background-color: #1a5fb4;
+    color: #fff !important;
+  }
+
+  .cv-logo {
+    background: #fff;
+    border-radius: 4px;
+    padding: 6px 8px;
+  }
 }
 
 *,
@@ -117,7 +131,7 @@ b {
 }
 
 abbr {
-  border-bottom: 1px black dotted;
+  border-bottom: 1px dotted currentColor;
   cursor: help;
 }
 
