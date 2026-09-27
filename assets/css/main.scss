@@ -77,7 +77,7 @@ html {
 
 body {
   font-family: Helvetica, Arial, sans-serif;
-  font-weight: 100;
+  font-weight: 400;
 }
 
 p {
@@ -92,7 +92,7 @@ h4,
 h5,
 h6 {
   font-family: Helvetica, sans-serif;
-  font-weight: 100;
+  font-weight: 400;
 }
 
 h1,
@@ -154,7 +154,7 @@ article a,
 .news a,
 .post-header .desc a {
   color: var(--global-theme-color);
-  font-weight: 100;
+  font-weight: 400;
 
   &:hover {
     text-decoration: underline;
@@ -460,6 +460,10 @@ article a,
     display: block;
   }
 
+  .cv-row > span {
+    display: block;
+  }
+
   .cv-meta {
     display: block;
     font-size: 0.875rem;
@@ -474,5 +478,37 @@ article a,
     width: 100% !important;
     float: none !important;
     margin-left: 0 !important;
+    margin-top: 0;
+
+    img {
+      display: block;
+      margin: 0 auto;
+      max-width: 60%;
+    }
+  }
+
+  .publications ol.bibliography li {
+    .row {
+      display: block;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .col-sm-2.abbr {
+      max-width: 45%;
+      padding-left: 0;
+    }
+
+    .col-sm-8 {
+      max-width: none;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .bibtex pre,
+    .bibtex code {
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
   }
 }
