@@ -3,6 +3,7 @@ layout: cv
 permalink: /cv/
 title: CV
 nav: false
+sitemap: false # unlinked duplicate of the homepage content
 nav_order: 5
 cv_pdf: /assets/pdf/soham_patil_cv.pdf # you can also use external links here
 cv_format: rendercv # options: rendercv, jsonresume

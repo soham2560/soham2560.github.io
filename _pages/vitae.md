@@ -5,6 +5,7 @@ permalink: /vitae/
 nav: true
 nav_order: 1
 redirect: /assets/pdf/soham_patil_cv.pdf
+sitemap: false # only redirects to the PDF
 ---
 
 <script>

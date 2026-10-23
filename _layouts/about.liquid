@@ -1,0 +1,161 @@
+---
+layout: default
+---
+{% comment %}
+  Local override of al_folio_core/_layouts/about.liquid.
+  Differences from upstream:
+    - The bio (everything before the first <h2>) sits in a two-column hero next
+      to the profile photo; the remaining sections run full width below it.
+    - Social links and a "last updated" date render directly under the profile
+      photo instead of at the bottom of the page.
+    - Email links (the social icon and any mailto: in the bio) go through
+      al_email_protect, so a click copies the address and shows a toast.
+    - Emits a schema.org ProfilePage/Person block for search engines. Profile
+      links come from _data/socials.yml; the email is left out on purpose.
+  Tracked in .al-folio-overrides.yml.
+{% endcomment %}
+{% assign about_parts = content | split: '<h2' %}
+{% assign about_bio = about_parts | first %}
+{% assign about_rest = content | remove_first: about_bio %}
+
+{% assign person_same_as = '' | split: ',' %}
+{% if site.data.socials.github_username %}
+  {% capture person_link %}https://github.com/{{ site.data.socials.github_username }}{% endcapture %}
+  {% assign person_same_as = person_same_as | push: person_link %}
+{% endif %}
+{% if site.data.socials.linkedin_username %}
+  {% capture person_link %}https://www.linkedin.com/in/{{ site.data.socials.linkedin_username }}{% endcapture %}
+  {% assign person_same_as = person_same_as | push: person_link %}
+{% endif %}
+{% if site.data.socials.scholar_userid %}
+  {% capture person_link %}https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}{% endcapture %}
+  {% assign person_same_as = person_same_as | push: person_link %}
+{% endif %}
+{% capture person_name %}{{ site.first_name }} {{ site.last_name }}{% endcapture %}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "url": {{ '/' | absolute_url | jsonify }},
+    "mainEntity": {
+      "@type": "Person",
+      "name": {{ person_name | jsonify }},
+      "url": {{ '/' | absolute_url | jsonify }},
+      {% if page.profile.image %}"image": {{ page.profile.image | prepend: '/assets/img/' | absolute_url | jsonify }},{% endif %}
+      "description": {{ site.description | jsonify }},
+      "jobTitle": "Master’s student",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Robotics Research Center, IIIT Hyderabad",
+        "url": "https://robotics.iiit.ac.in/"
+      },
+      "alumniOf": { "@type": "CollegeOrUniversity", "name": "MIT World Peace University" },
+      "knowsAbout": ["Dexterous manipulation", "Robot learning", "Contact estimation", "Reinforcement learning"],
+      "sameAs": {{ person_same_as | jsonify }}
+    }
+  }
+</script>
+
+<div class="post about">
+  <section class="hero">
+    <header class="post-header hero-head">
+      <h1 class="post-title">
+        {% if site.title == 'blank' %}
+          {{ site.first_name }}
+          {% if site.middle_name %}{{ site.middle_name }} {% endif %}
+          {{- site.last_name }}
+        {% else %}
+          {{ site.title }}
+        {% endif %}
+      </h1>
+      {% if page.subtitle %}
+        <p class="desc">{{ page.subtitle }}</p>
+      {% endif %}
+    </header>
+
+    {% if page.profile %}
+      <aside class="profile hero-aside" aria-label="Profile and links">
+        {% if page.profile.image %}
+          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+          {% if page.profile.image_circular %}
+            {% assign profile_image_class = 'img-fluid rounded-circle' %}
+          {% else %}
+            {% assign profile_image_class = 'img-fluid' %}
+          {% endif %}
+          {% capture sizes %}(min-width: 768px) 280px, 140px{% endcapture %}
+          {% capture profile_alt %}Photo of {{ site.first_name }} {{ site.last_name }}{% endcapture %}
+          {%
+            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=profile_alt
+            cache_bust=true
+          %}
+        {% endif %}
+
+        <div class="profile-links">
+          {% if page.social %}
+            {% comment %}
+              al_email_protect_html splices an anchor's other attributes into its
+              class value (al_email_protect 1.0.1), so drop jekyll-socials' title on
+              the email link first and add an accessible label afterwards.
+            {% endcomment %}
+            {% capture social_html %}{% social_links %}{% endcapture %}
+            {% assign social_html = social_html
+              | replace: ' title="Email"', ''
+              | replace: " title='Email'", ''
+              | al_email_protect_html
+              | replace: 'class="al-email-protect "', 'class="al-email-protect" title="Copy email address" aria-label="Copy email address"'
+            %}
+            <div class="contact-icons">{{ social_html }}</div>
+          {% endif %}
+          {% if site.contact_note %}
+            <div class="contact-note">{{ site.contact_note }}</div>
+          {% endif %}
+        </div>
+
+        {% if page.profile.more_info %}
+          <div class="more-info">{{ page.profile.more_info }}</div>
+        {% endif %}
+      </aside>
+    {% endif %}
+
+    <div class="hero-bio">{{ about_bio | al_email_protect_html }}</div>
+  </section>
+
+  <article class="about-sections">
+    <p class="last-updated">
+      Updated <time datetime="{{ site.time | date: '%Y-%m' }}">{{ site.time | date: '%b %Y' }}</time>
+    </p>
+    {{ about_rest }}
+
+    <!-- News -->
+    {% if page.announcements and page.announcements.enabled %}
+      <h2>
+        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
+      </h2>
+      {% include news.liquid limit=true %}
+    {% endif %}
+
+    <!-- Latest posts -->
+    {% if page.latest_posts and page.latest_posts.enabled %}
+      <h2>
+        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
+      </h2>
+      {% include latest_posts.liquid %}
+    {% endif %}
+
+    <!-- Selected papers -->
+    {% if page.selected_papers %}
+      <h2>
+        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
+      </h2>
+      {% include selected_papers.liquid %}
+    {% endif %}
+
+    {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
+      {% if site.plugins contains 'al_newsletter' %}
+        {% include plugins/al_newsletter_form_center_margin.liquid %}
+      {% else %}
+        {% include newsletter.liquid center=true %}
+      {% endif %}
+    {% endif %}
+  </article>
+</div>
