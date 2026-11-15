@@ -1,0 +1,23 @@
+---
+permalink: /llms.txt
+sitemap: false
+---
+{%- assign base = site.baseurl | prepend: site.url -%}
+# {{ site.first_name }} {{ site.last_name }}
+
+> {{ site.description }}
+
+This is the personal academic website of {{ site.first_name }} {{ site.last_name }}. All pages are static HTML and readable without JavaScript.
+
+## Pages
+
+- [Home]({{ base }}/): bio, news, publications, Stepping Stones (projects), experience, education, awards and teaching
+- [Publications]({{ base }}/publications/): papers with abstracts, arXiv, project websites, code and posters
+- [News]({{ base }}/news/): recent updates
+- [CV (PDF)]({{ base }}/assets/pdf/soham_patil_cv.pdf)
+
+## Profiles
+
+- [Google Scholar](https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }})
+- [GitHub](https://github.com/{{ site.data.socials.github_username }})
+- [LinkedIn](https://www.linkedin.com/in/{{ site.data.socials.linkedin_username }})

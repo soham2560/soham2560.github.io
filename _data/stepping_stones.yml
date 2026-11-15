@@ -1,0 +1,72 @@
+# "Stepping Stones" on the homepage (_pages/about.md).
+# Work along the way that the publication list alone does not show.
+#
+# Fields
+#   title        required
+#   description  one or two sentences
+#   tags         short technology / framework names
+#   media        path from the site root: an image, GIF, or .mp4/.webm video.
+#                Videos play like a GIF (muted, looping, inline, no controls).
+#                Media is shown at 16:9 and cropped to fill. Until the file exists
+#                the card shows a "Media pending" placeholder naming this path.
+#   alt          what the media shows (for screen readers)
+#   link         optional: repo, video or project page. Without it, present
+#                media links to the full-size file.
+
+- title: DextrAH-RGB on xArm7 + LEAP Hand
+  description: "Ported the DextrAH-RGB dexterous grasping pipeline to our xArm7 and LEAP Hand, including the geometric fabrics controller, a ros2_control interface for the LEAP Hand, and policy changes for our setup so we can retrain it for our own tasks. Containerised, with Isaac Sim and Gazebo digital twins, and runs the policy at 30 Hz with plenty of headroom."
+  tags: [xArm7, LEAP Hand, Geometric Fabrics, ros2_control, Isaac Sim, Gazebo, Docker, Reinforcement Learning]
+  media: assets/video/stepping_stones/dextrah.mp4
+  alt: xArm7 with a LEAP Hand grasping an object on a table in the lab
+
+- title: Dense Tactile In-Hand Manipulation
+  description: "Ongoing work on how dexterous policies can use dense binary contact information over the hand, starting with dexterous grasping and also in-hand rotation with the LEAP Hand."
+  tags: [LEAP Hand, Isaac Lab, Reinforcement Learning, Tactile Sensing]
+  media: assets/video/stepping_stones/dense.mp4
+  alt: Simulated in-hand rotation with dense contact points highlighted on the hand
+
+- title: Hand-Object Contact Dataset Generation
+  description: "Large-scale generation of hand-object contact labels. The first version recorded contacts with Isaac Sim's contact API while the hand actively manipulated objects; this was later updated to better techniques."
+  tags: [Isaac Sim, NVIDIA Warp, Python]
+  media: assets/img/stepping_stones/datacollection.jpeg
+  alt: Simulated hand grasping an object, with the recorded contact points shown
+
+- title: LEAP Hand with Custom Tactile Fingertips
+  description: "Fitted the LEAP Hand's fingertips with FSR sensors that report binary contact, and extended its proprioception-only policy to use these readings. Deployed zero-shot from simulation for in-hand rotation."
+  tags: [LEAP Hand, FSR Sensors, Sim-to-Real, Reinforcement Learning]
+  media: assets/video/stepping_stones/custom_sensor_policy.mp4
+  alt: LEAP Hand with sensorised fingertips rotating a cube
+
+- title: Vision-Based Tactile Sensor Calibration
+  description: "Vision-based tactile sensors drift as their gel surface wears over time. Tried out methods for calibrating their shear readings to keep measurements consistent."
+  tags: [Tactile Sensing, Calibration, Computer Vision]
+  media: assets/img/stepping_stones/sensor_calibration.jpg
+  alt: Vision-based tactile sensor mounted in a calibration rig
+
+- title: Bipedal Robot Hardware Bring-Up
+  description: "Early hardware bring-up of a bipedal robot in our lab, covering low-level motor control and the ros2_control software packages, so that colleagues could build their research on it. The platform was later taken forward by others in the lab."
+  tags: [Motor Control, ros2_control, ROS 2, Docker, C++]
+  media: assets/img/stepping_stones/biped.png
+  alt: Bipedal robot standing in the lab
+
+# --- Earlier projects (previously the "projects" section). ---
+- title: MPCHoloNavigation
+  description: "Model-predictive-control holonomic navigation in ROS 2, with SLAM Toolbox localisation and Nav2 integration. Course project, Robotics: Planning and Navigation, IIIT Hyderabad."
+  tags: [ROS 2, MPC, SLAM Toolbox, Nav2]
+  media: assets/img/mpcholonavigation.jpeg
+  alt: Holonomic robot used for MPCHoloNavigation
+  link: https://github.com/soham2560/MPCHoloNavigation
+
+- title: LiDAR_Camera_Calibration
+  description: "Extrinsic and intrinsic LiDAR-camera calibration from rosbag data and checkerboard images, using Zhang's method for intrinsics. Course project, Mobile Robotics, IIIT Hyderabad."
+  tags: [ROS 2, LiDAR, Camera calibration]
+  media: assets/img/lidarcameracalibration.jpeg
+  alt: LiDAR and camera rig used for calibration
+  link: https://github.com/soham2560/LiDAR_Camera_Calibration
+
+- title: DockerForROS2Development
+  description: "Pre-built Dev Container images for ROS 2 (Humble, Iron) and ROS 1 (Noetic), with optional Gazebo, published on GHCR."
+  tags: [Docker, Dev Containers, ROS 2, ROS 1, Gazebo]
+  media: assets/img/docker.png
+  alt: Terminal running a ROS 2 dev container
+  link: https://github.com/soham2560/DockerForROS2Development

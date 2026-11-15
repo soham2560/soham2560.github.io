@@ -1,8 +1,8 @@
 ---
 layout: page
 permalink: /publications/
-title: publications
-description:
+title: Publications
+description: Publications by Soham Patil on dexterous manipulation, contact estimation from vision and proprioception, and aerial grasping.
 nav: false
 nav_order: 2
 ---
