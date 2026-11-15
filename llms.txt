@@ -1,0 +1,18 @@
+# Soham Patil
+
+> Soham Patil is a Master’s student at the Robotics Research Center, IIIT Hyderabad, working on learning for contact-rich dexterous manipulation.
+
+This is the personal academic website of Soham Patil. All pages are static HTML and readable without JavaScript.
+
+## Pages
+
+- [Home](https://soham2560.github.io/): bio, news, publications, Stepping Stones (projects), experience, education, awards and teaching
+- [Publications](https://soham2560.github.io/publications/): papers with abstracts, arXiv, project websites, code and posters
+- [News](https://soham2560.github.io/news/): recent updates
+- [CV (PDF)](https://soham2560.github.io/assets/pdf/soham_patil_cv.pdf)
+
+## Profiles
+
+- [Google Scholar](https://scholar.google.com/citations?user=bx7FRb8AAAAJ)
+- [GitHub](https://github.com/soham2560)
+- [LinkedIn](https://www.linkedin.com/in/sohampatil2560)
