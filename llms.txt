@@ -1,6 +1,6 @@
 # Soham Patil
 
-> Soham Patil is a Master’s student at the Robotics Research Center, IIIT Hyderabad, working on learning for contact-rich dexterous manipulation.
+> Soham Patil is a Master’s student at the Robotics Research Center (RRC), IIIT Hyderabad, working on learning for contact-rich dexterous manipulation.
 
 This is the personal academic website of Soham Patil. All pages are static HTML and readable without JavaScript.
 
